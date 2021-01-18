@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="Survey.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <header>
+
+               <h1 id="title">What type of Calisthenics athletes are you?</h1>
+               <p id="description">Show us who you are!</p>
+
+        </header>
+
+        <main>
+
+            <form action="#" id="survey-form">
+
+                <label for="name" id="name-label">Name</label><br>
+                <input type="text" name="name" id="name" required placeholder="Insert your Name">
+                <br><br>
+                <label for="email" id="email-label">Email</label><br>
+                <input type="email" name="email" id="email" required placeholder="Insert your Email">
+                <br><br>
+                <label for="number" id="number-label">Age</label><br>
+                <input type="number" name="" id="number" min="5" max="100" required placeholder="Insert your Age">
+                <br><br>
+                <label for="dropdown">How do you train like?</label><br>
+                <select name="type" id="dropdown" placeholder="Select an option">
+                    <option disabled selected value="">Select option</option>
+                    <option value="Military">Military</option>
+                    <option value="Static">Static</option>
+                    <option value="FreeStyle">FreeStyle</option>
+                    <option value="Aesthetic">Aesthetic</option>
+                </select>
+                <br><br>
+                <fieldset name="training" id="radio">
+                    <legend>What do you train the most?</legend>
+                    <input type="radio" name="exercises" id="push-up" value="push-up">
+                    <label for="push-up">Push ups</label><br>
+                    <input type="radio" name="exercises" id="pull-chin" value="pull-chin">
+                    <label for="pull-chin">Pulls or Chins up</label><br>
+                    <input type="radio" name="exercises" id="squat" value="squat">
+                    <label for="squat">Squats</label><br>
+                    <input type="radio" name="exercises" id="dip" value="dip">
+                    <label for="dip">Dips</label><br>
+
+                </fieldset>
+                <br><br>
+                <fieldset name="times" id="checkbox">
+                    <legend>How often per week?</legend>
+                    <input type="checkbox" name="answer1" id="answer1" value="three">
+                    <label for="">Three days </label><br>
+                    <input type="checkbox" name="answer1" id="answer2" value="four">
+                    <label for="">Four days </label><br>
+                    <input type="checkbox" name="answer3" id="answer3" value="five">
+                    <label for="">Five days </label><br>
+                    <input type="checkbox" name="answer4" id="answer4" value="six">
+                    <label for="">Six days </label><br>
+                </fieldset>
+                <br><br>
+                <fieldset id="text">
+                    <label for="text-area">Additional comments</label>
+                    <textarea name="comments" id="text-area"  rows="10" cols="5"></textarea>
+                </fieldset>
+                    
+                   
+              
+              
+                <br>
+                <label for="submit"></label>
+                <button id="submit">Submit</button>
+
+            </form>
+
+            
+    
+        </main>
+
+        <nav>
+
+
+        </nav>
+
+        <footer>
+
+
+        </footer>
+
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
