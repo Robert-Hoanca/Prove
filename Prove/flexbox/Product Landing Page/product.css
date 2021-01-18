@@ -1,0 +1,196 @@
+body{
+    font-family: 'Yusei Magic', sans-serif;
+}
+#header{
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 98%;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    
+}
+#nav-bar{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+   text-decoration: none;
+   color: black;
+}
+.link{
+    list-style: none;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    
+}
+.nav-link{
+    padding-left: 10%;
+}
+#form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#email{
+    width: 20%;
+}
+#sumbit{
+    width: 20%;
+}
+h1{
+    text-align: center;
+}
+#video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#header-img{
+    width: 10%;
+    height: auto;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3{
+    text-align: center;
+}
+#contacts{
+    display: flex;
+   justify-content: space-between;
+    width: 50vw;
+    
+}
+#contact{
+    display: flex;
+    justify-content: center;
+}
+#figure{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#caption{
+    box-shadow:grey 1px 1px ;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    
+    body{
+        font-family: 'Yusei Magic', sans-serif;
+    }
+    #header{
+        display: flex;
+        position: fixed;
+        overflow: hidden;
+        max-width: 100%;
+        flex-direction: row;
+        background: white;
+    }
+    #nav-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+    }
+    a{
+       text-decoration: none;
+       color: black;
+    }
+    .link{
+        list-style: none;
+        display: flex;
+        width: 50%;  
+        flex-direction: row;
+        
+    }
+    ul li{
+        width: 100%;
+        margin-left: 10%; 
+    }
+    
+    #form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #email{
+        width: 20%;
+    }
+    #sumbit{
+        width: 20%;
+    }
+    h1{
+        text-align: center;
+    }
+    .video-container{
+        display: flex;
+        justify-content: center;
+    }
+    #container{
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        width: 20vw;
+        height: 45vh;
+    }
+    #contacts{
+        display: flex;
+        justify-content: space-around;
+        width: 50vw;
+        
+    }
+    #contact{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #figure{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    #caption{
+        box-shadow:grey 1px 1px ;
+        text-align: center;
+    }
+    
+    #header-img{
+        width: 6%;
+        height: auto;
+    }
+    h3{
+        text-align: center;
+    }
+    #container{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    
+    #video{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+}
+
+
+
+
+
+

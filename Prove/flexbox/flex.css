@@ -1,0 +1,146 @@
+.first{
+    border: 2px solid black;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    background: silver;  
+}
+
+.second{
+    border: 2px solid black;
+    height:300px;
+    padding: 10px;
+    margin: 10px;
+    background: slategray;
+}
+.third{
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background: rgba(255, 255, 0, 0.5);
+}
+
+
+main{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    border: 1px solid black;
+    flex: auto; 
+    display: flex;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    border: 1px solid black;
+    width: 50px;
+    margin: 10px;
+}
+.square{
+    background: red;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+h1{
+    font-size: 4vw;
+    border: 1px solid black;
+    text-align: center;
+}
+header{
+    border: 1px solid black;
+}
+
+
+
+
+
+
+@media (min-width: 600px){
+    .first{
+        border: 2px solid black;
+        height: 300px;
+        flex-grow: 2;
+        padding: 10px;
+        margin: 10px;
+        
+    }
+    
+    .second{
+        border: 2px solid black;
+        height:300px;
+        flex-grow: 10;
+        padding: 10px;
+        margin: 10px;
+    }
+    .third{
+        height: 300px;
+        border: 2px solid black;
+        flex-grow: 4;
+        padding: 10px;
+        margin: 10px;
+    }
+    main{
+        border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10vh;
+    }
+    
+    h1{
+        border: 1px solid black;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    nav{
+        border: 1px solid green;
+        width: 100%;
+        justify-content: center ;
+        
+    }
+
+   
+    nav ul li{
+        list-style: none;
+        border: 1px solid black;
+        width: 100px;
+        margin : 10px;
+        
+    }
+    .square{
+        background: yellow;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        order: 1;
+    }
+    .links{
+        border : 1px solid black;
+        order:2;
+    }
+    header{
+        border: 1px solid black;
+    }
+
+    footer{
+        margin: 10vh 0 0 0;
+        border: 1px solid black;
+    }
+}
