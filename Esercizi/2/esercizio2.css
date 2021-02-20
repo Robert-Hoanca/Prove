@@ -1,0 +1,277 @@
+:root{
+    --orange: rgb(217,121,62);
+}
+
+body{
+ margin: 0;
+ font-family: 'Yusei Magic', sans-serif;
+}
+#navbar{
+    z-index: 2;
+    color: white;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+/*
+@keyframes pnav2{
+    0% {
+        width: 10%;
+        height: 10%;
+        text-align: end;
+    }
+    50%{
+        text-align: end;
+    }
+
+    100% {
+        width: 50%;
+        text-align: end;
+    }
+}*/
+#pnav{
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    transform: rotate(270deg);
+    width: 10%;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid white;
+}
+#pnav2{
+    font-size: 6vw;
+    margin-top: 0px;
+    margin-right: 10px;
+    width: 5%;
+    text-align: end;
+    animation-name: pnav2;
+    animation-duration: 0.9s;
+}
+#pnav2:hover , #pnav:hover{
+    
+    background-color: rgba(255,255,255,0.1);
+    transition-duration:0.3s;
+    
+}
+
+
+
+
+#home{
+    background-image: radial-gradient(circle, rgba(115,115,115,0.24685848460477944) 15%, rgba(66,66,66,1) 100%),url(./pexels-h-emre-773471.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#text{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 50%;
+    border: 2px solid white;
+    padding: 10px;
+    margin-bottom: 10%;
+}
+h1{
+    z-index: 3;
+    font-size: 10vw;
+    position: relative;
+    color: white;
+    
+}
+h2{
+    z-index: 2;
+    font-size: 10vw;
+    position: relative;
+    color: white;
+}
+
+#section1-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+}
+#section2-img
+{
+    width: 100%;
+    height: auto;
+}
+
+
+#content1{
+    height: 100%;
+    background: rgb(43,43,43);
+}
+#content2{
+    background: var(--orange);
+    height: 100%;
+    margin-top: -5px;  
+    color: white;
+    max-width: 100%;
+}
+.section1-text{
+    width:100%;
+    height: 100%;
+    background: rgb(43,43,43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30%;
+    
+}
+.section2-text{
+    width:100%;
+    height: 100%;
+    background: var(--orange);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+#section1-title{
+    color: var(--orange);
+    font-size: 11vw;
+    margin-left: 10%;
+    
+}
+#section2-title{
+    color:  black;
+    font-size: 11vw;
+    margin-left: 10%;
+}
+#p1{
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 3vw;
+}
+#p2{
+    color: white;
+    margin-left: -60%;
+    font-size: 1.5vw;
+}
+
+#p3{
+    margin-left: 10%;
+    width: 50%;
+    margin-bottom: -12%;
+    font-size: 2vw;
+}
+#p4{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 2.5vw;
+}
+#p5{
+    margin-left: 10%;
+    font-size: 2vw;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/*         LAPTOP            */
+@media (min-width:768px){
+
+       
+       #home{
+           height: 100vh;
+       }
+
+        #pnav{
+        font-size: 1vw;
+        }
+        #pnav2{
+        text-align: center;
+        font-size: 3vw;
+        
+        }
+        
+       h1{
+           font-size: 5vw;
+           text-align: end;
+           margin-right: 5%;
+           color: white;        
+       }
+       h2{
+           font-size: 2vw;
+           text-align: end;
+           margin-right: 5%;
+           margin-top: -10%;
+       }
+       #text{
+        margin-bottom: 0%;
+        margin-right: 5%;
+        border: none;
+       }
+       #home{
+        justify-content: flex-end;
+       }
+
+        #section1-img{
+            
+            width: 50%;
+            height: auto;       
+        }
+        #section2-img
+        {
+            width: 50%;
+            height: 100%;
+            order: 1;
+        }
+        
+        #content1{
+            height: 110vh;
+            display: flex;           
+        }
+        #content2{
+            height: 110vh;
+            display: flex;    
+        }
+        .section1-text{
+            width:50vw;            
+        }
+        .section2-text{
+            width:50vw;
+            height: 100%;
+            order: 2;           
+        }
+        
+        #section1-title{
+            font-size: 5vw;        
+        }
+        #section2-title{
+            font-size: 5vw;
+        }
+        #p1{
+            font-size: 1.5vw;
+        }
+        #p2{
+            font-size: 1vw;
+        }
+        
+        #p3{
+            font-size: 1.2vw;
+        }
+        #p4{
+            font-size: 1.2vw;
+        }
+        #p5{
+            font-size: 1.5vw;
+        }
+    
+}
+
+
