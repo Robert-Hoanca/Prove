@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Binary System</title>
+</head>
+<body >
+
+
+
+    <header>
+        <h1> Binary <p>converter</p></h1>
+    </header>
+
+    <main id="main" >
+
+        <div id="rod" >
+            <div id="fishing_line">
+
+            </div>
+
+            <div id="fishing_hook">
+                <div class="hook">
+                    <img src="./images/fish-hook-silhouette/fish-hook-silhouette.svg" alt="" id="hook">
+                    
+                </div>
+                <div>
+                    <img src="./images/PngItem_1203694.png" alt="Sign" id="sign"><p style="position: relative; top: -69px; left: 70px; color: black; font-family: 'Pangolin', cursive; font-weight: 900;">Decimal</p>
+                    <input type="text" id="decimal" style="position: relative; top: -85px; left: 10px; text-align: center; background: transparent ; border: none; z-index: 4; outline: none; font-family: 'Pangolin', cursive;" autocomplete="off">
+                    <img src="./images/fishhh.svg" alt="" onclick="binaryConverter(), bubbleUp() "  id="fish" >
+                </div>
+                
+            </div>
+        </div>
+
+
+        <section id="box">
+            <form action="#">
+                <label for="decimal" style="display: none;">Decimal:</label>
+                <br><br>
+                <div class="result" style="display: none;">
+                    <label for="binary">Binary:</label>
+                    <p id="binary_result"></p>
+                </div>
+
+            </form>
+            
+        </section>
+
+        
+        <div id="bubbles">
+            <div id="bubble_container">
+                <div class="bubble">
+                    
+                </div>
+            </div>
+            
+    
+            </div>
+        </div>
+        
+
+        <div id="little_bubbles">
+            
+        </div>
+
+            
+    </main>
+    
+
+    <footer>
+
+    </footer>
+    
+
+
+    <script src="./binary.js"></script>
+    <script src="./bubbleAnimation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        function bubbleUp(){
+           var tl= gsap.timeline()                              //Moves bubble in y axis randomly
+            .to(".bubble", {
+            y: "random(0,-170)",
+            duration : 2,
+            repeatRefresh: true
+        })              
+        }
+
+        /*function fishMove(){                                                          //Moves fish to random position on mouse hover
+            margin= Math.random() * 40;
+            document.getElementById("fish").style.margin= margin + "%";
+        }
+
+        function fishOut(){
+            document.getElementById("fish").style.margin= margin + "%";
+        }*/
+
+        
+        
+    </script>
+
+    
+</body>
+</html>
