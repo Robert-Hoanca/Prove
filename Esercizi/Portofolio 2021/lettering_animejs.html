@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        #home{
+            height: 100vh;
+            width: 100vw;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10vw;
+            letter-spacing: 50px;
+        }
+
+        .myName span{
+            position: relative;
+            display: inline-block;
+        }
+
+
+
+        #section2{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10vw;
+            color: white;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <h1 class="myName">Robert</h1>
+    </div>
+
+
+
+    <div id="section2">
+        <p class="something">Hoanca</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        var text = document.querySelector(".myName");                               //GET THE TEXT
+        text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>")          //DIVIDE TEXT INTO LETTERS AND PUT THEM INTO SPAN
+  
+
+        var something = document.querySelector(".something");                               //GET THE TEXT
+        something.innerHTML = something.textContent.replace(/\S/g,"<span>$&</span>")
+
+
+
+        anime.timeline({
+            loop: false
+        })
+  
+        .add({
+            targets: ".myName span",
+            translateY : [-600,0],
+            scale: [10,1],
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay : anime.stagger(100),
+        })
+
+        .add({
+            targets: ".myName span",
+            translateX : [0,-1000],
+            scale: [1,1],
+            opacity: [1,0],
+            easing: "easeOutExpo",
+            duration: 2000,
+            delay : anime.stagger(100),
+        })
+        
+
+        .add({
+            targets: ".something span",
+            translateY : [-600,0],
+            scale: [10,1],
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay : anime.stagger(100),
+        })
+        
+        .add({
+            targets: ".something span",
+            translateX : [0,-1000],
+            scale: [1,1],
+            opacity: [1,0],
+            easing: "easeOutExpo",
+            duration: 2000,
+            delay : anime.stagger(100),
+        })
+        
+  
+  </script>       
+</body>
+</html>

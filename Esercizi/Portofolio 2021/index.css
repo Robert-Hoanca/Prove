@@ -1,0 +1,755 @@
+:root{
+    --yellow: rgb(194, 196, 80);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Odibee Sans', cursive;
+    scroll-behavior: smooth;
+    overflow-y:hidden;
+    user-select: none;
+    background: var(--yellow);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+main{
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+main::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* -------------- LOADER -------*/
+#loader{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 70px;
+    
+}
+
+
+#loader div{
+    overflow: hidden;
+}
+
+#letters{
+    font-size: 10vw;
+    color: white;
+    position: relative;
+    bottom:-600px;
+
+}
+#letters span{
+    position: relative;
+    display: inline-block;
+}
+
+
+#letters :last-child{
+    animation-name: dot-rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+
+@keyframes dot-rotation{
+    0%{
+       opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- HOME---------*/
+
+
+#home{
+    scroll-snap-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--yellow);
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+.myName{
+    font-size: 10vw;
+    letter-spacing: 100px;
+    position: absolute;
+    top: -40%;
+    left: 20%;
+    z-index: 2;
+}
+
+.myName span{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.myName1{
+    font-size: 3vw;
+    position: relative;
+    top: -20%;
+    left: 20%;
+   
+}
+.myName1 span{
+    position: relative;
+    display: inline-block;
+}
+
+
+.myName1 :nth-child(1){
+    color: rgb(177, 2, 2);
+}
+
+
+
+
+.lines1{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines1 :nth-child(1){
+    transform-origin: top right;
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines1 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform-origin: top right;
+}
+
+
+
+.lines2{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines2 :nth-child(1){
+    transform-origin: top left;
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines2 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+
+
+
+.mouseScroll{
+    width: 21px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.mouseWheel{
+    width: 6px;
+    height: 10px;
+    margin-top: 30%;
+    border-radius: 32px;
+    background: rgba(0, 0, 0, 0.5);
+    animation-name: mouseScroll;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes mouseScroll{
+    0%{
+        
+    }
+    50%{
+        margin-top: 40%;
+    }
+    100%{
+        margin-top: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------ ABOUT -------*/
+
+#about{
+    height: 100vh;
+    width: 100vw;
+    background: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.about_me{
+    font-size: 3.5vw;
+}
+
+.image{
+    width: 15%;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 10%;
+    display: none;
+}
+
+.image img{
+    max-width: 100%;
+}
+
+
+.lines3{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines3 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines3 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+
+
+.lines4{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines4 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines4 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(90deg);
+    transform-origin: top right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----- WORKS -------*/
+
+#works{
+    height: 100vh;
+    width: 100vw;
+    background: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+#works h3{
+    font-size: 3.5vw;
+    text-indent: 15%;
+}
+
+.binary h5, .toDoList h5, .stopWatch h5{
+    font-size: 2.5vw;
+  /*  text-indent: 20%;*/
+}
+
+
+
+
+
+.lines5{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines5 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines5 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+}
+
+
+
+.lines6{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines6 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines6 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+}
+
+
+
+
+
+
+.binary, .stopWatch, .toDoList{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.toDoList h5{
+    margin-left: 2%;
+}
+
+
+
+.binary p, .stopWatch p{
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    margin-left: -9%;
+}
+
+.stopWatch h5{
+    margin-left: -2%;
+}
+
+
+.list_container{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-self: center;
+
+}
+
+.list_container :nth-child(1), .list_container :nth-child(2), .list_container :nth-child(3){
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.list_container :nth-child(1) :nth-child(1), .list_container :nth-child(2) :nth-child(1), .list_container :nth-child(3) :nth-child(1){
+    width: 70%;
+    height: 100%;
+    background: rgb(97, 96, 96);
+    border-radius: 6px;
+}
+
+.list_container :nth-child(1) :nth-child(2), .list_container :nth-child(2) :nth-child(2), .list_container :nth-child(3) :nth-child(2) {
+     width: 13%;
+    height: 100%;
+    background: rgb(245, 112, 112);
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- CONTACTS -----------*/
+
+#contacts{
+    height: 100vh;
+    width: 100vw;
+    background: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    scroll-snap-align: center;
+
+}
+
+#contacts h3{
+    font-size: 7vw;
+}
+#contacts a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+
+#contacts a:hover{
+    text-decoration: underline;
+}
+
+
+
+.lines7{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines7 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines7 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+
+
+.lines8{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    width: 30px;
+    height: 30px;
+}
+.lines8 :nth-child(1){
+    
+    height: 1px;
+    width: 0px;
+    background: black;
+    
+}
+.lines8 :nth-child(2){
+    height: 1px;
+    width: 0px;
+    background: black;
+    transform: rotate(90deg);
+    transform-origin: top right;
+}
+
+
+
+
+
+@media screen and (max-width: 678px){
+    /* -------------- LOADER -------*/
+#loader{
+    letter-spacing: 50px;
+}
+
+
+#letters{
+    font-size: 7vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- HOME---------*/
+
+
+
+.myName{
+    font-size: 25vw;
+    letter-spacing: 10px;
+    top: -40%;
+}
+
+
+
+.myName1{
+    font-size: 12vw;
+    top: -20%;
+}
+
+.lines1{
+
+    right: 2%;
+    top: 2%;
+
+}
+
+
+.lines2{
+
+    bottom: 0%;
+    left: 2%;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*------ ABOUT -------*/
+
+
+.about_me{
+    font-size: 10vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+
+
+
+
+
+/*----- WORKS -------*/
+
+
+
+#works h3{
+    font-size: 10vw;
+    text-indent: 15%;
+}
+
+.binary h5, .toDoList h5, .stopWatch h5{
+    font-size: 8vw;
+}
+
+
+
+
+.binary, .stopWatch, .toDoList{
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDoList h5{
+    margin-left: 0%;
+}
+
+
+
+.binary p, .stopWatch p{
+    font-size: 6vw;
+    margin-left: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- CONTACTS -----------*/
+
+
+
+#contacts h3{
+    font-size: 20vw;
+    margin-left: 10%;
+}
+#contacts a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+
+#contacts a:hover{
+    text-decoration: underline;
+}
+
+}
